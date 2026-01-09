@@ -1,22 +1,32 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Pranav Padmannavar | Data Science Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="icon" type="image/png" href="favicon.png">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <title>Pranav Padmannavar | Data Science Portfolio</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<style>
-			/* Force Project images to a fixed height */
-			.posts article .image.fit img {
-				height: 300px;  /* You can change this to 250px or 350px if you prefer */
-				object-fit: cover;
-				width: 100%;
-			}
-		</style>
-	</head>
+        <style>
+            /* 1. Force Project images to a fixed height */
+            .posts article .image.fit img {
+                height: 300px;  
+                object-fit: cover;
+                width: 100%;
+            }
+
+            /* 2. Sticky Navigation Bar Settings */
+            #nav {
+                position: -webkit-sticky; /* For Safari */
+                position: sticky;
+                top: 0;
+                z-index: 10000; /* High number ensures it floats ABOVE everything else */
+                background: #212931; /* Dark background so text is readable while scrolling */
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional: subtle separation line */
+            }
+        </style>
+    </head>
 	<body class="is-preload">
 
 		<div id="wrapper" class="fade-in">
@@ -169,14 +179,14 @@
 								</header>
 								
 								<ul class="actions fit">
-									<li><a href="#ml-section" class="button primary fit scrolly">Machine Learning & Advanced Analytics</a></li>
+									<li><a href="#ml-section" class="button primary fit scrolly">Machine Learning & Data Science</a></li>
 									<li><a href="#viz-section" class="button fit scrolly">Data Visualization & Dashboards</a></li>
 								</ul>
 							</div>
 
 						<div id="ml-section" class="box" style="margin-top: 4rem; background-color: #fafafa;">
 								<h2 style="text-align:center; font-size: 2.2em; letter-spacing: 0.1em; margin-bottom: 0;">
-									Machine Learning & Advanced Analytics
+									Machine Learning & Data Science
 								</h2>
 							</div>
 
@@ -194,16 +204,16 @@
 								</article>
 
 								<article>
-									<header>
-										<span class="date">Time Series & Supply Chain</span>
-										<h2><a href="https://github.com/pranavsp108/Time-Series-Forcasting.git">Demand Forecasting &<br />Inventory Optimization</a></h2>
-									</header>
-									<a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" class="image fit"><img src="images/ML_DS/Time_series.jpg" alt="Time Series" /></a>
-									<p>Developed a time-series forecasting model projected to reduce inventory costs by 15% and improve order fulfillment rates by 28%.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" class="button">View Project</a></li>
-									</ul>
-								</article>
+                                    <header>
+                                        <span class="date">Energy Analytics & XGBoost</span>
+                                        <h2><a href="https://github.com/pranavsp108/Time-Series-Forcasting.git">Time-Series Forecasting <br />with XGBoost</a></h2>
+                                    </header>
+                                    <a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" class="image fit"><img src="images/ML_DS/Time_series.jpg" alt="Time Series" /></a>
+                                    <p>Engineered a supervised learning pipeline to predict hourly energy consumption patterns. Transformed raw temporal data into engineered features to capture complex seasonality, achieving robust predictive accuracy on PJM grid data using XGBoost.</p>
+                                    <ul class="actions special">
+                                        <li><a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" class="button">View Project</a></li>
+                                    </ul>
+                                </article>
 
 								<article>
 									<header>
