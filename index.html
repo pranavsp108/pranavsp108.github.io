@@ -1,6 +1,15 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHL160NT0Z"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-LHL160NT0Z');
+        </script>
+
         <title>Pranav Padmannavar | Data Science Portfolio</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -40,15 +49,6 @@
             .table-wrapper td { vertical-align: top !important; line-height: 1.8; }
         </style>
     </head>
-    </head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHL160NT0Z"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-LHL160NT0Z');
-    </script>
 
     <body class="is-preload">
 
@@ -81,9 +81,9 @@
                         </ul>
                         
                         <ul class="icons">
-                            <li><a href="https://www.linkedin.com/in/pranavsp108/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-                            <li><a href="https://www.kaggle.com/pranavpadmannavar" class="icon brands alt fa-kaggle" target="_blank"><span class="label">Kaggle</span></a></li>
-                            <li><a href="https://github.com/pranavsp108" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                            <li><a href="https://www.linkedin.com/in/pranavsp108/" class="icon brands fa-linkedin" target="_blank" onclick="gtag('event', 'social_click', {'network': 'LinkedIn'});"><span class="label">LinkedIn</span></a></li>
+                            <li><a href="https://www.kaggle.com/pranavpadmannavar" class="icon brands alt fa-kaggle" target="_blank" onclick="gtag('event', 'social_click', {'network': 'Kaggle'});"><span class="label">Kaggle</span></a></li>
+                            <li><a href="https://github.com/pranavsp108" class="icon brands alt fa-github" target="_blank" onclick="gtag('event', 'social_click', {'network': 'GitHub'});"><span class="label">GitHub</span></a></li>
                         </ul>
                     </nav>
                 <div id="main">
@@ -98,7 +98,7 @@
                                     Currently an <strong>MS Analytics</strong> student at UMN with a <strong>Minor in Business Management</strong> from the Carlson School, I specialize in building scalable ML pipelines that drive revenue. I am actively seeking full-time Data Scientist roles starting <strong>May 2026</strong>.
                                 </p>
                                 <ul class="actions special">
-                                    <li><a href="Pranav_Padmannavar_DS.pdf" class="button large icon solid fa-download" download target="_blank">Download Resume</a></li>
+                                    <li><a href="Pranav_Padmannavar_DS.pdf" class="button large icon solid fa-download" download target="_blank" onclick="gtag('event', 'resume_downloaded');">Download Resume</a></li>
                                 </ul>
                             </header>
                         </article>
@@ -241,96 +241,99 @@
                                 <article>
                                     <header>
                                         <span class="date">MLOps & Deep Learning</span>
-                                        <h2><a href="https://github.com/pranavsp108/stock-market-pipeline" target="_blank">GLOBALMARKET AI:<br /> AUTONOMOUS PREDICTIVE PIPELINE</a></h2>
+                                        <h2><a href="https://github.com/pranavsp108/stock-market-pipeline" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'GlobalMarket_AI'});">GLOBALMARKET AI:<br /> AUTONOMOUS PREDICTIVE PIPELINE</a></h2>
                                     </header>
-                                    <a href="https://github.com/pranavsp108/stock-market-pipeline" class="image fit" target="_blank"><img src="images/ML_DS/stock_market.png" alt="Stock Market" /></a>
+                                    
+                                    <a href="https://github.com/pranavsp108/stock-market-pipeline" class="image fit" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'GlobalMarket_AI'});"><img src="images/ML_DS/stock_market.png" alt="Stock Market" /></a>
+                                    
                                     <p>Engineered a self-healing MLOps pipeline using Kafka and LSTM on AWS to automate forecasting for 9 global market indices; implemented an autonomous retraining loop and custom watchdog monitoring to ensure 99.9% system uptime.</p>
+                                    
                                     <ul class="actions special">
-                                        <li><a href="https://github.com/pranavsp108/stock-market-pipeline" class="button" target="_blank">View Project</a></li>
+                                        <li><a href="https://github.com/pranavsp108/stock-market-pipeline" class="button" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'GlobalMarket_AI'});">View Project</a></li>
                                     </ul>
                                 </article>
                                 
                                 <article>
                                     <header>
                                         <span class="date">XGBoost & LightGBM</span>
-                                        <h2><a href="https://github.com/pranavsp108/Financial-Fraud-Detection.git" target="_blank">Financial Fraud <br />Detection</a></h2>
+                                        <h2><a href="https://github.com/pranavsp108/Financial-Fraud-Detection.git" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Financial_Fraud_XGBoost'});">Financial Fraud <br />Detection</a></h2>
                                     </header>
-                                    <a href="https://github.com/pranavsp108/Financial-Fraud-Detection.git" class="image fit" target="_blank"><img src="images/ML_DS/fraud.webp" alt="Fraud Detection" /></a>
+                                    <a href="https://github.com/pranavsp108/Financial-Fraud-Detection.git" class="image fit" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Financial_Fraud_XGBoost'});"><img src="images/ML_DS/fraud.webp" alt="Fraud Detection" /></a>
                                     <p>Detecting financial fraud using XGBoost and LightGBM. Focused on handling extreme class imbalance and advanced feature engineering.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://github.com/pranavsp108/Financial-Fraud-Detection.git" class="button" target="_blank">View Project</a></li>
+                                        <li><a href="https://github.com/pranavsp108/Financial-Fraud-Detection.git" class="button" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Financial_Fraud_XGBoost'});">View Project</a></li>
                                     </ul>
                                 </article>
 
                                 <article>
                                     <header>
                                         <span class="date">Energy Analytics & XGBoost</span>
-                                        <h2><a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" target="_blank">Time-Series Forecasting <br />with XGBoost</a></h2>
+                                        <h2><a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Time_Series_Forecasting'});">Time-Series Forecasting <br />with XGBoost</a></h2>
                                     </header>
-                                    <a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" class="image fit" target="_blank"><img src="images/ML_DS/Time_series.jpg" alt="Time Series" /></a>
+                                    <a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" class="image fit" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Time_Series_Forecasting'});"><img src="images/ML_DS/Time_series.jpg" alt="Time Series" /></a>
                                     <p>Engineered a supervised learning pipeline to predict hourly energy consumption patterns. Transformed raw temporal data into engineered features to capture complex seasonality, achieving robust predictive accuracy on PJM grid data using XGBoost.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" class="button" target="_blank">View Project</a></li>
+                                        <li><a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" class="button" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Time_Series_Forecasting'});">View Project</a></li>
                                     </ul>
                                 </article>
 
                                 <article>
                                     <header>
                                         <span class="date">Predictive Modeling</span>
-                                        <h2><a href="https://github.com/pranavsp108/Predicting-Customer-Churn-In-a-Telecommunication-Industry.git" target="_blank">Customer Churn <br />Prediction</a></h2>
+                                        <h2><a href="https://github.com/pranavsp108/Predicting-Customer-Churn-In-a-Telecommunication-Industry.git" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Customer_Churn'});">Customer Churn <br />Prediction</a></h2>
                                     </header>
-                                    <a href="https://github.com/pranavsp108/Predicting-Customer-Churn-In-a-Telecommunication-Industry.git" class="image fit" target="_blank"><img src="images/ML_DS/churn.png" alt="Customer Churn" /></a>
+                                    <a href="https://github.com/pranavsp108/Predicting-Customer-Churn-In-a-Telecommunication-Industry.git" class="image fit" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Customer_Churn'});"><img src="images/ML_DS/churn.png" alt="Customer Churn" /></a>
                                     <p>Leveraging predictive modeling to identify at-risk customers and improve retention strategies based on behavioral data.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://github.com/pranavsp108/Predicting-Customer-Churn-In-a-Telecommunication-Industry.git" class="button" target="_blank">View Project</a></li>
+                                        <li><a href="https://github.com/pranavsp108/Predicting-Customer-Churn-In-a-Telecommunication-Industry.git" class="button" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Customer_Churn'});">View Project</a></li>
                                     </ul>
                                 </article>
 
                                 <article>
                                     <header>
                                         <span class="date">Association Rules</span>
-                                        <h2><a href="https://github.com/pranavsp108/Market_Basket_Analysis-Instacart.git" target="_blank">Market Basket <br />Analysis</a></h2>
+                                        <h2><a href="https://github.com/pranavsp108/Market_Basket_Analysis-Instacart.git" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Market_Basket'});">Market Basket <br />Analysis</a></h2>
                                     </header>
-                                    <a href="https://github.com/pranavsp108/Market_Basket_Analysis-Instacart.git" class="image fit" target="_blank"><img src="images/ML_DS/Market_basket.jpg" alt="Instacart Analysis" /></a>
+                                    <a href="https://github.com/pranavsp108/Market_Basket_Analysis-Instacart.git" class="image fit" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Market_Basket'});"><img src="images/ML_DS/Market_basket.jpg" alt="Instacart Analysis" /></a>
                                     <p>Analyzed 3M+ grocery orders to segment customers into "Loyal" vs "Occasional" shoppers and identify product association rules.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://github.com/pranavsp108/Market_Basket_Analysis-Instacart.git" class="button" target="_blank">View Project</a></li>
+                                        <li><a href="https://github.com/pranavsp108/Market_Basket_Analysis-Instacart.git" class="button" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Market_Basket'});">View Project</a></li>
                                     </ul>
                                 </article>
 
                                 <article>
                                     <header>
                                         <span class="date">R & Predictive Analytics</span>
-                                        <h2><a href="https://github.com/pranavsp108/Chicago_Traffic_Data_Analysis.git" target="_blank">Chicago Traffic <br />Analysis</a></h2>
+                                        <h2><a href="https://github.com/pranavsp108/Chicago_Traffic_Data_Analysis.git" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Chicago_Traffic'});">Chicago Traffic <br />Analysis</a></h2>
                                     </header>
-                                    <a href="https://github.com/pranavsp108/Chicago_Traffic_Data_Analysis.git" class="image fit" target="_blank"><img src="images/ML_DS/chicago-traffic.jpg" alt="Traffic Analysis" /></a>
+                                    <a href="https://github.com/pranavsp108/Chicago_Traffic_Data_Analysis.git" class="image fit" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Chicago_Traffic'});"><img src="images/ML_DS/chicago-traffic.jpg" alt="Traffic Analysis" /></a>
                                     <p>Predictive analysis of severe injury factors in Chicago traffic crashes (2016-2024) using R programming.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://github.com/pranavsp108/Chicago_Traffic_Data_Analysis.git" class="button" target="_blank">View Project</a></li>
+                                        <li><a href="https://github.com/pranavsp108/Chicago_Traffic_Data_Analysis.git" class="button" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Chicago_Traffic'});">View Project</a></li>
                                     </ul>
                                 </article>
 
                                 <article>
                                     <header>
                                         <span class="date">PySpark & Docker</span>
-                                        <h2><a href="https://www.kaggle.com/code/pranavpadmannavar/content-collaborative-filtering-recommendation" target="_blank">End-to-End <br />Recommender System</a></h2>
+                                        <h2><a href="https://www.kaggle.com/code/pranavpadmannavar/content-collaborative-filtering-recommendation" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'End_to_End_Recommender_System'});">End-to-End <br />Recommender System</a></h2>
                                     </header>
-                                    <a href="https://www.kaggle.com/code/pranavpadmannavar/content-collaborative-filtering-recommendation" class="image fit" target="_blank"><img src="images/ML_DS/movie.png" alt="Recommendation System" /></a>
+                                    <a href="https://www.kaggle.com/code/pranavpadmannavar/content-collaborative-filtering-recommendation" class="image fit" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'End_to_End_Recommender_System'});"><img src="images/ML_DS/movie.png" alt="Recommendation System" /></a>
                                     <p>Engineered a scalable PySpark pipeline and deployed a containerized (Docker) REST API on Azure, increasing user engagement by 25%.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://www.kaggle.com/code/pranavpadmannavar/content-collaborative-filtering-recommendation" class="button" target="_blank">View Project</a></li>
+                                        <li><a href="https://www.kaggle.com/code/pranavpadmannavar/content-collaborative-filtering-recommendation" class="button" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'End_to_End_Recommender_System'});">View Project</a></li>
                                     </ul>
                                 </article>
 
                                 <article>
                                     <header>
                                         <span class="date">EDA & Statistics</span>
-                                        <h2><a href="https://github.com/pranavsp108/IPL_Analysis_Apache_Spark.git" target="_blank">IPL Data <br />Analysis</a></h2>
+                                        <h2><a href="https://github.com/pranavsp108/IPL_Analysis_Apache_Spark.git" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'IPL_Data_Analysis'});">IPL Data <br />Analysis</a></h2>
                                     </header>
-                                    <a href="https://github.com/pranavsp108/IPL_Analysis_Apache_Spark.git" class="image fit" target="_blank"><img src="images/ML_DS/Ipl.jpg" alt="IPL Analysis" /></a>
+                                    <a href="https://github.com/pranavsp108/IPL_Analysis_Apache_Spark.git" class="image fit" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'IPL_Data_Analysis'});"><img src="images/ML_DS/Ipl.jpg" alt="IPL Analysis" /></a>
                                     <p>Exploratory data analysis of cricket match statistics to determine winning factors and player performance metrics.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://github.com/pranavsp108/IPL_Analysis_Apache_Spark.git" class="button" target="_blank">View Project</a></li>
+                                        <li><a href="https://github.com/pranavsp108/IPL_Analysis_Apache_Spark.git" class="button" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'IPL_Data_Analysis'});">View Project</a></li>
                                     </ul>
                                 </article>
                             </section>
@@ -345,72 +348,72 @@
                                 <article>
                                     <header>
                                         <span class="date">Healthcare Analytics</span>
-                                        <h2><a href="https://public.tableau.com/views/EmergencyRoomVisitsAnalytics_17627339383640/EmergencyRoomDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">Emergency Room <br />Visits</a></h2>
+                                        <h2><a href="https://public.tableau.com/views/EmergencyRoomVisitsAnalytics_17627339383640/EmergencyRoomDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Emergency_Room'});">Emergency Room <br />Visits</a></h2>
                                     </header>
-                                    <a href="https://public.tableau.com/views/EmergencyRoomVisitsAnalytics_17627339383640/EmergencyRoomDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank"><img src="images/DV/er.jpg" alt="ER Visits" /></a>
+                                    <a href="https://public.tableau.com/views/EmergencyRoomVisitsAnalytics_17627339383640/EmergencyRoomDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Emergency_Room'});"><img src="images/DV/er.jpg" alt="ER Visits" /></a>
                                     <p>Operational dashboard analyzing patient throughput, visit reasons, and peak traffic times to assist in staffing optimization and resource allocation for emergency departments.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://public.tableau.com/views/EmergencyRoomVisitsAnalytics_17627339383640/EmergencyRoomDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank">View Dashboard</a></li>
+                                        <li><a href="https://public.tableau.com/views/EmergencyRoomVisitsAnalytics_17627339383640/EmergencyRoomDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Emergency_Room'});">View Dashboard</a></li>
                                     </ul>
                                 </article>
 
                                 <article>
                                     <header>
                                         <span class="date">Clinical Data</span>
-                                        <h2><a href="https://public.tableau.com/views/Heartfailure_17627340496090/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">Heart Failure <br />Analysis</a></h2>
+                                        <h2><a href="https://public.tableau.com/views/Heartfailure_17627340496090/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Heart_Failure'});">Heart Failure <br />Analysis</a></h2>
                                     </header>
-                                    <a href="https://public.tableau.com/views/Heartfailure_17627340496090/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank"><img src="images/DV/heart.jpeg" alt="Heart Failure" /></a>
+                                    <a href="https://public.tableau.com/views/Heartfailure_17627340496090/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Heart_Failure'});"><img src="images/DV/heart.jpeg" alt="Heart Failure" /></a>
                                     <p>Clinical dashboard correlating patient demographics with key medical indicators to identify high-risk factors and patterns associated with heart failure outcomes.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://public.tableau.com/views/Heartfailure_17627340496090/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank">View Dashboard</a></li>
+                                        <li><a href="https://public.tableau.com/views/Heartfailure_17627340496090/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Heart_Failure'});">View Dashboard</a></li>
                                     </ul>
                                 </article>
 
                                 <article>
                                     <header>
                                         <span class="date">Sales Strategy</span>
-                                        <h2><a href="https://public.tableau.com/views/LaptopSalesPerformanceDashboard/FinalDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">Laptop Sales <br />Performance</a></h2>
+                                        <h2><a href="https://public.tableau.com/views/LaptopSalesPerformanceDashboard/FinalDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Laptop_Sales'});">Laptop Sales <br />Performance</a></h2>
                                     </header>
-                                    <a href="https://public.tableau.com/views/LaptopSalesPerformanceDashboard/FinalDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank"><img src="images/DV/laptop.jpg" alt="Laptop Sales" /></a>
+                                    <a href="https://public.tableau.com/views/LaptopSalesPerformanceDashboard/FinalDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Laptop_Sales'});"><img src="images/DV/laptop.jpg" alt="Laptop Sales" /></a>
                                     <p>An interactive dashboard analyzing sales trends, geographic distribution, and product configurations to identify key revenue drivers and optimal pricing strategies for the UK market.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://public.tableau.com/views/LaptopSalesPerformanceDashboard/FinalDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank">View Dashboard</a></li>
+                                        <li><a href="https://public.tableau.com/views/LaptopSalesPerformanceDashboard/FinalDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Laptop_Sales'});">View Dashboard</a></li>
                                     </ul>
                                 </article>
 
                                 <article>
                                     <header>
                                         <span class="date">Media Analytics</span>
-                                        <h2><a href="https://public.tableau.com/views/IMDbMovieDashboard_17627341409670/IMDbMovieDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">IMDb Movie <br />Dashboard</a></h2>
+                                        <h2><a href="https://public.tableau.com/views/IMDbMovieDashboard_17627341409670/IMDbMovieDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'IMDb_Movie'});">IMDb Movie <br />Dashboard</a></h2>
                                     </header>
-                                    <a href="https://public.tableau.com/views/IMDbMovieDashboard_17627341409670/IMDbMovieDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank"><img src="images/DV/imdb.png" alt="IMDb" /></a>
+                                    <a href="https://public.tableau.com/views/IMDbMovieDashboard_17627341409670/IMDbMovieDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'IMDb_Movie'});"><img src="images/DV/imdb.png" alt="IMDb" /></a>
                                     <p>A comprehensive visualization of historical movie data, analyzing genre popularity, rating distributions, and audience preference shifts over decades of cinema history.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://public.tableau.com/views/IMDbMovieDashboard_17627341409670/IMDbMovieDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank">View Dashboard</a></li>
+                                        <li><a href="https://public.tableau.com/views/IMDbMovieDashboard_17627341409670/IMDbMovieDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'IMDb_Movie'});">View Dashboard</a></li>
                                     </ul>
                                 </article>
 
                                 <article>
                                     <header>
                                         <span class="date">Social Media</span>
-                                        <h2><a href="https://public.tableau.com/shared/9TQ4PM64P?:display_count=n&:origin=viz_share_link" target="_blank">Instagram <br />Analytics</a></h2>
+                                        <h2><a href="https://public.tableau.com/shared/9TQ4PM64P?:display_count=n&:origin=viz_share_link" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Instagram_Analytics'});">Instagram <br />Analytics</a></h2>
                                     </header>
-                                    <a href="https://public.tableau.com/shared/9TQ4PM64P?:display_count=n&:origin=viz_share_link" class="image fit" target="_blank"><img src="images/DV/insta.png" alt="Instagram" /></a>
+                                    <a href="https://public.tableau.com/shared/9TQ4PM64P?:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Instagram_Analytics'});"><img src="images/DV/insta.png" alt="Instagram" /></a>
                                     <p>An interactive analysis of user behavior and content performance, tracking engagement metrics and demographic trends to optimize social media strategies and audience reach.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://public.tableau.com/shared/9TQ4PM64P?:display_count=n&:origin=viz_share_link" class="button" target="_blank">View Dashboard</a></li>
+                                        <li><a href="https://public.tableau.com/shared/9TQ4PM64P?:display_count=n&:origin=viz_share_link" class="button" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Instagram_Analytics'});">View Dashboard</a></li>
                                     </ul>
                                 </article>
 
                                 <article>
                                     <header>
                                         <span class="date">Content Strategy</span>
-                                        <h2><a href="https://public.tableau.com/views/Netflix_17627342414270/Netflix?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">Netflix Content <br />Analysis</a></h2>
+                                        <h2><a href="https://public.tableau.com/views/Netflix_17627342414270/Netflix?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Netflix_Content_Analysis'});">Netflix Content <br />Analysis</a></h2>
                                     </header>
-                                    <a href="https://public.tableau.com/views/Netflix_17627342414270/Netflix?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank"><img src="images/DV/netflix.jpg" alt="Netflix" /></a>
+                                    <a href="https://public.tableau.com/views/Netflix_17627342414270/Netflix?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Netflix_Content_Analysis'});"><img src="images/DV/netflix.jpg" alt="Netflix" /></a>
                                     <p>A deep dive into the Netflix content library, visualizing genre distribution, release patterns, and viewer ratings to understand streaming trends and content popularity.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://public.tableau.com/views/Netflix_17627342414270/Netflix?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank">View Dashboard</a></li>
+                                        <li><a href="https://public.tableau.com/views/Netflix_17627342414270/Netflix?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank" onclick="gtag('event', 'project_click', {'project_name': 'Netflix_Content_Analysis'});">View Dashboard</a></li>
                                     </ul>
                                 </article>
                             </section>
@@ -451,9 +454,9 @@
                             <section>
                                 <h3>Social</h3>
                                 <ul class="icons alt">
-                                    <li><a href="https://www.linkedin.com/in/pranavsp108/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-                                    <li><a href="https://www.kaggle.com/pranavpadmannavar" class="icon brands alt fa-kaggle" target="_blank"><span class="label">Kaggle</span></a></li>
-                                    <li><a href="https://github.com/pranavsp108" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                                    <li><a href="https://www.linkedin.com/in/pranavsp108/" class="icon brands fa-linkedin" target="_blank" onclick="gtag('event', 'social_click', {'network': 'LinkedIn'});"><span class="label">LinkedIn</span></a></li>
+                                    <li><a href="https://www.kaggle.com/pranavpadmannavar" class="icon brands alt fa-kaggle" target="_blank" onclick="gtag('event', 'social_click', {'network': 'Kaggle'});"><span class="label">Kaggle</span></a></li>
+                                    <li><a href="https://github.com/pranavsp108" class="icon brands alt fa-github" target="_blank" onclick="gtag('event', 'social_click', {'network': 'GitHub'});"><span class="label">GitHub</span></a></li>
                                 </ul>
                             </section>
                         </section>
@@ -470,8 +473,4 @@
             <script src="assets/js/jquery.scrolly.min.js"></script>
             <script src="assets/js/browser.min.js"></script>
             <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
-
-    </body>
-</html>
+            <script src
