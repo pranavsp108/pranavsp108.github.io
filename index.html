@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Pranav Padmannavar | Data Science Portfolio</title>
+        <title>Pranav Padmannavar | Data Science & Analytics</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="icon" type="image/png" href="favicon.png">
-        
+        <link rel="icon" type="image/png" href="images/favicon.png">
+
         <meta property="og:title" content="Pranav Padmannavar | Data Science Portfolio" />
         <meta property="og:description" content="MS Analytics @ UMN | Business Minor (Carlson) | Former Data Science Consultant @ Daikin Applied ($1.5M Savings)" />
         <meta property="og:image" content="https://pranavsp108.github.io/images/profile_preview.jpg" />
@@ -38,6 +38,85 @@
                 width: 100%;
             }
             .table-wrapper td { vertical-align: top !important; line-height: 1.8; }
+
+            .skills-grid-custom {
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                    gap: 1.5rem;
+                    margin-top: 1rem;
+                }
+
+                .skill-card {
+                    border: 1px solid rgba(0, 0, 0, 0.08);
+                    padding: 1.5rem 1.5rem 1rem 1.5rem;
+                    background: rgba(255, 255, 255, 0.45);
+                    min-height: 220px;
+                }
+
+                .skill-card h4 {
+                    margin-bottom: 1rem;
+                    font-size: 1.05rem;
+                    letter-spacing: 0.08em;
+                }
+
+                .skill-card ul {
+                    list-style: none;
+                    padding-left: 0;
+                    margin: 0;
+                }
+
+                .skill-card ul li {
+                    margin-bottom: 0.65rem;
+                    font-size: 0.98rem;
+                    line-height: 1.6;
+                }
+
+                .skill-card ul li::before {
+                    content: "•";
+                    margin-right: 0.55rem;
+                    color: rgba(0, 0, 0, 0.55);
+                }
+
+                @media screen and (max-width: 736px) {
+                    .skills-grid-custom {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .skill-card {
+                        min-height: auto;
+                    }
+                }
+
+            .posts article p {
+                font-size: 0.95rem;
+                line-height: 1.7;
+                margin-top: 1rem;
+            }
+
+            .posts article .actions.special {
+                margin-top: 1rem;
+            }
+
+            .icons .tableau-badge,
+            .icons.alt .tableau-badge {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.25em;
+                height: 2.25em;
+                border: solid 2px rgba(255, 255, 255, 0.25);
+                border-radius: 100%;
+                font-size: 0.85em;
+                font-weight: 700;
+                text-decoration: none;
+                color: #ffffff;
+                line-height: 1;
+            }
+
+            .icons.alt .tableau-badge {
+                border-color: rgba(255, 255, 255, 0.25);
+                color: #ffffff;
+            }
         </style>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHL160NT0Z"></script>
         <script>
@@ -56,12 +135,11 @@
                     <h1>PRANAV<br />
                     PADMANNAVAR</h1>
                     <p style="line-height: 1.6;">
-                        <strong>MS Analytics @ UMN</strong> | Minor: <strong>Business Management</strong> (Carlson School)<br /> 
-                        Former Data Science Consultant @ <strong>Daikin Applied</strong><br />
-                        Ex-TCS Data Analyst (2.5 Yrs)
+                        Building data systems that turn messy workflows into better decisions.<br />
+                        <strong>MS in Analytics @ UMN</strong> | Ex-TCS Data Analyst | Daikin optimization capstone
                     </p>
                     <ul class="actions">
-                        <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+                        <li><a href="#profile" class="button icon solid fa-arrow-down scrolly">View Portfolio</a></li>
                     </ul>
                 </div>
 
@@ -70,8 +148,8 @@
                     </header>
 
                 <nav id="nav">
-                        <ul class="links">
-                            <li class="active"><a href="index.html">Portfolio Home</a></li>
+                        <ul class="links" id="main-nav-links">
+                            <li><a href="#intro" class="scrolly">Portfolio Home</a></li>
                             <li><a href="#profile" class="scrolly">Professional Profile</a></li>
                             <li><a href="#projects" class="scrolly">Projects</a></li>
                             <li><a href="certi.html">Certifications</a></li>
@@ -80,8 +158,9 @@
                         
                         <ul class="icons">
                             <li><a href="https://www.linkedin.com/in/pranavsp108/" class="icon brands fa-linkedin" target="_blank" onclick="gtag('event', 'social_click', {'network': 'LinkedIn'});"><span class="label">LinkedIn</span></a></li>
-                            <li><a href="https://www.kaggle.com/pranavpadmannavar" class="icon brands alt fa-kaggle" target="_blank" onclick="gtag('event', 'social_click', {'network': 'Kaggle'});"><span class="label">Kaggle</span></a></li>
                             <li><a href="https://github.com/pranavsp108" class="icon brands alt fa-github" target="_blank" onclick="gtag('event', 'social_click', {'network': 'GitHub'});"><span class="label">GitHub</span></a></li>
+                            <li><a href="https://www.kaggle.com/pranavpadmannavar" class="icon brands alt fa-kaggle" target="_blank" onclick="gtag('event', 'social_click', {'network': 'Kaggle'});"><span class="label">Kaggle</span></a></li>
+                            <li><a href="https://public.tableau.com/app/profile/pranav.padmannavar/vizzes" class="tableau-badge" target="_blank" onclick="gtag('event', 'social_click', {'network': 'Tableau'});">Tb</a></li>
                         </ul>
                     </nav>
                 <div id="main">
@@ -90,10 +169,11 @@
                             <header class="major">
                                 <h2>About Me</h2>
                                 <p>
-                                    Hi! I’m <strong>Pranav</strong>. I bridge the gap between complex data and actionable business strategy. <br /><br />
-                                    With over <strong>2.5 years of experience</strong> at TCS and a successful tenure as a <strong>Data Science & Optimization Consultant at Daikin Applied</strong>, I have a proven track record of delivering high-impact solutions—including <strong>$1.5M in annual savings</strong> through automated engineering analytics.
+                                    I’m an <strong>MS in Analytics</strong> graduate from the <strong>University of Minnesota</strong> with <strong>2.5 years of experience</strong> building reporting, automation, and decision-support systems in business settings.
                                     <br /><br />
-                                    Currently an <strong>MS Analytics</strong> student at UMN with a <strong>Minor in Business Management</strong> from the Carlson School, I specialize in building scalable ML pipelines that drive revenue. I am actively seeking full-time Data Scientist roles starting <strong>May 2026</strong>.
+                                    I do my best work on messy problems where data, workflows, and business context all matter. My background spans <strong>Python, SQL, forecasting, optimization, dashboards, and applied machine learning</strong> — with experience improving reporting speed, accuracy, and operational decision-making.
+                                    <br /><br />
+                                    Most recently, my work included identifying <strong>$1.5M+ in projected annual savings</strong> through optimization at <strong>Daikin Applied</strong>. I’m currently seeking full-time roles in <strong>data science and analytics</strong> where I can build practical systems that solve real business problems.
                                 </p>
                                 <ul class="actions special">
                                     <li><a href="Pranav_Padmannavar_DS.pdf" class="button large icon solid fa-download" download target="_blank" onclick="gtag('event', 'resume_downloaded');">Download Resume</a></li>
@@ -111,21 +191,20 @@
                                     <table>
                                         <tbody>
                                             <tr>
-                                                <td style="width: 30%;">
+                                                <td style="width: 30%; vertical-align: top;">
                                                     <strong>M.S. in Analytics</strong><br />
                                                     <span style="font-size: 0.8em; color: #888;">Sep 2024 – May 2026</span>
                                                 </td>
-                                                <td>
+                                                <td style="line-height: 1.8;">
                                                     <strong>University of Minnesota Twin Cities</strong><br />
                                                     <span style="display: block; margin: 4px 0;"><strong>GPA: 3.7/4.0</strong></span>
-                                                    <span style="color: #1a73e8; font-weight: 700;">Minor: Business Management (Carlson School of Management)</span><br />
-                                                    <div style="margin-top: 10px; font-size: 0.95em;">
-                                                        <strong>DS/ML Core:</strong> Machine Learning Fundamentals, NLP, Recommendation Systems, Applied Regression, Stochastic Models.<br />
-                                                        <strong>Analytics/BI:</strong> Data Visualization, Exploratory Data Analytics, Optimization, Pricing Strategy.
-                                                    </div>
+                                                    <span>Minor: Business Management (Carlson School of Management)</span><br />
+                                                    <p style="margin-top: 10px;">
+                                                        Relevant coursework: Applied Regression Analysis, Machine Learning, Optimization, Recommendation Systems, Data Visualization.
+                                                    </p>
                                                 </td>
                                             </tr>
-                                        
+
                                             <tr>
                                                 <td style="width: 30%; vertical-align: top;">
                                                     <strong>B.E. in Mechanical Engineering</strong><br />
@@ -133,7 +212,6 @@
                                                 </td>
                                                 <td style="line-height: 1.8;">
                                                     <strong>Visvesvaraya Technological University</strong><br />
-                                                    <span style="display: block; margin: 4px 0;"><strong>GPA: 3.4/4.0</strong></span>
                                                     <p style="margin-top: 10px;">Foundation in engineering mathematics, statistics, and computational modeling.</p>
                                                 </td>
                                             </tr>
@@ -147,46 +225,46 @@
                                         <tbody>
                                             <tr>
                                                 <td style="width: 30%; vertical-align: top;">
-                                                    <strong>Graduate Teaching Assistant</strong><br />
-                                                    <span style="font-size: 0.8em; color: #888;">Jan 2025 – Present</span>
+                                                    <strong>Data Science Consultant</strong><br />
+                                                    <span style="font-size: 0.8em; color: #888;">Aug 2025 – Dec 2025</span>
                                                 </td>
                                                 <td style="line-height: 1.8;">
-                                                    <strong>University of Minnesota</strong> (IE 3521-Statistics, Quality, and Reliability)<br />
+                                                    <strong>Daikin Applied Americas</strong><br />
                                                     <ul style="margin-top: 10px;">
-                                                        <li>Advanced the comprehension and practical application of statistics for 150+ students by co-designing course assessments and providing direct mentorship in hypothesis testing, regression analysis, and R programming.</li>
+                                                        <li>Built a predictive optimization workflow in Python for HVAC design analysis, supporting <strong>$1.5M+ in projected annual savings</strong> across complex configuration decisions.</li>
+                                                        <li>Reduced simulation runtime by <strong>~90%</strong> by developing surrogate modeling workflows that replaced slower engineering simulations with faster predictive approximations.</li>
+                                                        <li>Integrated cost models with performance simulations to create a reusable decision-support framework for R&amp;D teams.</li>
                                                     </ul>
                                                 </td>
                                             </tr>
+
                                             <tr>
-                                                <td style="width: 30%;"><strong>Data Science Consultant</strong><br />
-                                                <span style="font-size: 0.8em; color: #888;">Aug 2025 – Dec 2025</span></td>
-                                                <td>
-                                                    <strong>Daikin Applied Americas</strong> (Minneapolis, MN)<br />
-                                                    <ul>
-                                                        <li>Engineered a predictive optimization framework (LightGBM) reducing simulation runtime by 90% for HVAC design.</li>
-                                                        <li>Identified $1.5M+ in projected annual savings by automating design parameter analysis.</li>
-                                                    </ul>
+                                                <td style="width: 30%; vertical-align: top;">
+                                                    <strong>Data Analyst</strong><br />
+                                                    <span style="font-size: 0.8em; color: #888;">Feb 2022 – Jul 2024</span>
                                                 </td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Instructor / Teaching Assistant</strong><br />
-                                                <span style="font-size: 0.8em; color: #888;">Jun 2025 – Aug 2025</span></td>
-                                                <td>
-                                                    <strong>UMN Data Science & AI Hub</strong><br />
-                                                    <ul>
-                                                        <li>Mentored 20+ teams on end-to-end AI capstone projects, guiding them on Python, model evaluation, and Responsible AI.</li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Data Analyst</strong></td>
-                                                <td>
-                                                    <strong>Tata Consultancy Services (TCS)</strong><br />
+                                                <td style="line-height: 1.8;">
+                                                    <strong>Tata Consultancy Services (Client: Pandora)</strong><br />
                                                     <ul style="margin-top: 10px;">
-                                                        <li>Automated 30+ mission-critical reports, saving 1,000+ manual hours annually.</li>
-                                                        <li>Engineered scalable ETL pipelines reducing processing workloads by 35%.</li>
-                                                        <li>Optimized SQL queries on multi-TB datasets, improving response times by 40%.</li>
-                                                        <li>Improved data accuracy by 15%, mitigating $50k+ in estimated revenue leakage.</li>
+                                                        <li>Automated <strong>30+ recurring sales and reporting workflows</strong> using Python and SQL, improving operational efficiency by <strong>18%</strong> and reducing manual effort.</li>
+                                                        <li>Optimized high-volume SQL queries and indexing strategies, cutting dashboard and reporting response times by <strong>40%</strong>.</li>
+                                                        <li>Built and maintained data pipelines using Python, SQL, and Microsoft BizTalk to improve data availability and consistency across global retail systems.</li>
+                                                        <li>Improved reporting accuracy by <strong>15%</strong> through validation and dashboarding workflows that supported business decision-making.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="width: 30%; vertical-align: top;">
+                                                    <strong>University of Minnesota</strong><br />
+                                                    <span style="font-size: 0.8em; color: #888;">Jan 2025 – May 2026</span>
+                                                </td>
+                                                <td style="line-height: 1.8;">
+                                                    <strong>Graduate Teaching Assistant / Instructor</strong><br />
+                                                    <span style="font-size: 0.95em;">Statistics, Project Management, and Data Science &amp; AI Hub instruction</span>
+                                                    <ul style="margin-top: 10px;">
+                                                        <li>Supported teaching and student learning across statistics, project management, Python, data analysis, and introductory machine learning.</li>
+                                                        <li>Mentored students through technical problem solving, project development, and clear communication of analytical concepts.</li>
                                                     </ul>
                                                 </td>
                                             </tr>
@@ -194,25 +272,46 @@
                                     </table>
                                 </div>
     
-                                <h3>Technical Arsenal</h3>
-                                <div class="box">
-                                    <div class="row">
-                                        <div class="col-6 col-12-medium">
-                                            <h4>Languages & Databases</h4>
-                                            <p>Python (Pandas, NumPy), SQL (Advanced), R, Scala, PostgreSQL, MySQL</p>
-                                        </div>
-                                        <div class="col-6 col-12-medium">
-                                            <h4>Machine Learning & AI</h4>
-                                            <p>Scikit-learn, XGBoost, LightGBM, PyTorch, TensorFlow, Hugging Face (NLP), Time Series Forecasting</p>
-                                        </div>
-                                        <div class="col-6 col-12-medium">
-                                            <h4>Big Data & Cloud</h4>
-                                            <p>PySpark, Kafka, Databricks, AWS (S3, EC2), Azure, Docker, Airflow</p>
-                                        </div>
-                                        <div class="col-6 col-12-medium">
-                                            <h4>Visualization & Tools</h4>
-                                            <p>Tableau, PowerBI, Matplotlib, Seaborn, Git, CI/CD</p>
-                                        </div>
+                                <h3>Core Skills</h3>
+                                <div class="skills-grid-custom">
+                                    <div class="skill-card">
+                                        <h4>Analytics & Programming</h4>
+                                        <ul>
+                                            <li>Python, SQL, R</li>
+                                            <li>Pandas, NumPy</li>
+                                            <li>Data Analysis</li>
+                                            <li>Statistical Modeling</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="skill-card">
+                                        <h4>Machine Learning</h4>
+                                        <ul>
+                                            <li>Scikit-learn, XGBoost, LightGBM</li>
+                                            <li>TensorFlow, PyTorch</li>
+                                            <li>Forecasting</li>
+                                            <li>Recommender Systems</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="skill-card">
+                                        <h4>Data Engineering</h4>
+                                        <ul>
+                                            <li>PySpark, Kafka, Airflow</li>
+                                            <li>Docker, Databricks</li>
+                                            <li>ETL Pipelines</li>
+                                            <li>AWS, Azure</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="skill-card">
+                                        <h4>Dashboards & BI</h4>
+                                        <ul>
+                                            <li>Power BI, Tableau</li>
+                                            <li>Matplotlib, Seaborn</li>
+                                            <li>KPI Reporting</li>
+                                            <li>Git</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </section>
@@ -225,7 +324,7 @@
                                 
                                 <ul class="actions fit">
                                     <li><a href="#ml-section" class="button primary fit scrolly">Machine Learning & Data Science</a></li>
-                                    <li><a href="#viz-section" class="button fit scrolly">Data Visualization & Dashboards</a></li>
+                                    <li><a href="#viz-section" class="button fit scrolly">Dashboards & Decision Support</a></li>
                                 </ul>
                             </div>
 
@@ -238,178 +337,130 @@
                             <section class="posts">
                                 <article>
                                     <header>
-                                        <span class="date">MLOps & Deep Learning</span>
-                                        <h2><a href="https://github.com/pranavsp108/stock-market-pipeline" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'GlobalMarket_AI'});">GLOBALMARKET AI:<br /> AUTONOMOUS PREDICTIVE PIPELINE</a></h2>
+                                        <span class="date">MLOps & Forecasting</span>
+                                        <h2><a href="https://github.com/pranavsp108/stock-market-pipeline" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'GlobalMarket_AI'});">GlobalMarket AI:<br />Automated Forecasting Pipeline</a></h2>
                                     </header>
-                                    
-                                    <a href="https://github.com/pranavsp108/stock-market-pipeline" class="image fit" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'GlobalMarket_AI'});"><img src="images/ML_DS/stock_market.png" alt="Stock Market" /></a>
-                                    
-                                    <p>Engineered a self-healing MLOps pipeline using Kafka and LSTM on AWS to automate forecasting for 9 global market indices; implemented an autonomous retraining loop and custom watchdog monitoring to ensure 99.9% system uptime.</p>
-                                    
+                            
+                                    <a href="https://github.com/pranavsp108/stock-market-pipeline" class="image fit" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'GlobalMarket_AI'});"><img src="images/ML_DS/stock_market.png" alt="GlobalMarket AI Forecasting Pipeline" /></a>
+                            
+                                    <p>Built an automated forecasting pipeline using Kafka, LSTM, and AWS for global market indices, with retraining and monitoring workflows designed to support reliable end-to-end predictions.</p>
+                            
                                     <ul class="actions special">
                                         <li><a href="https://github.com/pranavsp108/stock-market-pipeline" class="button" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'GlobalMarket_AI'});">View Project</a></li>
                                     </ul>
                                 </article>
-                                
+                            
                                 <article>
                                     <header>
-                                        <span class="date">XGBoost & LightGBM</span>
-                                        <h2><a href="https://github.com/pranavsp108/Financial-Fraud-Detection.git" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Financial_Fraud_XGBoost'});">Financial Fraud <br />Detection</a></h2>
-                                    </header>
-                                    <a href="https://github.com/pranavsp108/Financial-Fraud-Detection.git" class="image fit" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Financial_Fraud_XGBoost'});"><img src="images/ML_DS/fraud.webp" alt="Fraud Detection" /></a>
-                                    <p>Detecting financial fraud using XGBoost and LightGBM. Focused on handling extreme class imbalance and advanced feature engineering.</p>
-                                    <ul class="actions special">
-                                        <li><a href="https://github.com/pranavsp108/Financial-Fraud-Detection.git" class="button" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Financial_Fraud_XGBoost'});">View Project</a></li>
-                                    </ul>
-                                </article>
-
-                                <article>
-                                    <header>
-                                        <span class="date">Energy Analytics & XGBoost</span>
-                                        <h2><a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Time_Series_Forecasting'});">Time-Series Forecasting <br />with XGBoost</a></h2>
-                                    </header>
-                                    <a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" class="image fit" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Time_Series_Forecasting'});"><img src="images/ML_DS/Time_series.jpg" alt="Time Series" /></a>
-                                    <p>Engineered a supervised learning pipeline to predict hourly energy consumption patterns. Transformed raw temporal data into engineered features to capture complex seasonality, achieving robust predictive accuracy on PJM grid data using XGBoost.</p>
-                                    <ul class="actions special">
-                                        <li><a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" class="button" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Time_Series_Forecasting'});">View Project</a></li>
-                                    </ul>
-                                </article>
-
-                                <article>
-                                    <header>
-                                        <span class="date">Predictive Modeling</span>
-                                        <h2><a href="https://github.com/pranavsp108/Predicting-Customer-Churn-In-a-Telecommunication-Industry.git" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Customer_Churn'});">Customer Churn <br />Prediction</a></h2>
-                                    </header>
-                                    <a href="https://github.com/pranavsp108/Predicting-Customer-Churn-In-a-Telecommunication-Industry.git" class="image fit" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Customer_Churn'});"><img src="images/ML_DS/churn.png" alt="Customer Churn" /></a>
-                                    <p>Leveraging predictive modeling to identify at-risk customers and improve retention strategies based on behavioral data.</p>
-                                    <ul class="actions special">
-                                        <li><a href="https://github.com/pranavsp108/Predicting-Customer-Churn-In-a-Telecommunication-Industry.git" class="button" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Customer_Churn'});">View Project</a></li>
-                                    </ul>
-                                </article>
-
-                                <article>
-                                    <header>
-                                        <span class="date">Association Rules</span>
-                                        <h2><a href="https://github.com/pranavsp108/Market_Basket_Analysis-Instacart.git" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Market_Basket'});">Market Basket <br />Analysis</a></h2>
-                                    </header>
-                                    <a href="https://github.com/pranavsp108/Market_Basket_Analysis-Instacart.git" class="image fit" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Market_Basket'});"><img src="images/ML_DS/Market_basket.jpg" alt="Instacart Analysis" /></a>
-                                    <p>Analyzed 3M+ grocery orders to segment customers into "Loyal" vs "Occasional" shoppers and identify product association rules.</p>
-                                    <ul class="actions special">
-                                        <li><a href="https://github.com/pranavsp108/Market_Basket_Analysis-Instacart.git" class="button" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Market_Basket'});">View Project</a></li>
-                                    </ul>
-                                </article>
-
-                                <article>
-                                    <header>
-                                        <span class="date">R & Predictive Analytics</span>
-                                        <h2><a href="https://github.com/pranavsp108/Chicago_Traffic_Data_Analysis.git" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Chicago_Traffic'});">Chicago Traffic <br />Analysis</a></h2>
-                                    </header>
-                                    <a href="https://github.com/pranavsp108/Chicago_Traffic_Data_Analysis.git" class="image fit" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Chicago_Traffic'});"><img src="images/ML_DS/chicago-traffic.jpg" alt="Traffic Analysis" /></a>
-                                    <p>Predictive analysis of severe injury factors in Chicago traffic crashes (2016-2024) using R programming.</p>
-                                    <ul class="actions special">
-                                        <li><a href="https://github.com/pranavsp108/Chicago_Traffic_Data_Analysis.git" class="button" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Chicago_Traffic'});">View Project</a></li>
-                                    </ul>
-                                </article>
-
-                                <article>
-                                    <header>
-                                        <span class="date">PySpark & Docker</span>
+                                        <span class="date">Recommendation Systems</span>
                                         <h2><a href="https://www.kaggle.com/code/pranavpadmannavar/content-collaborative-filtering-recommendation" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'End_to_End_Recommender_System'});">End-to-End <br />Recommender System</a></h2>
                                     </header>
-                                    <a href="https://www.kaggle.com/code/pranavpadmannavar/content-collaborative-filtering-recommendation" class="image fit" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'End_to_End_Recommender_System'});"><img src="images/ML_DS/movie.png" alt="Recommendation System" /></a>
-                                    <p>Engineered a scalable PySpark pipeline and deployed a containerized (Docker) REST API on Azure, increasing user engagement by 25%.</p>
+                                    <a href="https://www.kaggle.com/code/pranavpadmannavar/content-collaborative-filtering-recommendation" class="image fit" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'End_to_End_Recommender_System'});"><img src="images/ML_DS/movie.png" alt="End-to-End Recommender System" /></a>
+                                    <p>Engineered a scalable PySpark recommendation pipeline and deployed a containerized Docker REST API on Azure to deliver real-time recommendations and improve user engagement.</p>
                                     <ul class="actions special">
                                         <li><a href="https://www.kaggle.com/code/pranavpadmannavar/content-collaborative-filtering-recommendation" class="button" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'End_to_End_Recommender_System'});">View Project</a></li>
                                     </ul>
                                 </article>
-
+                            
                                 <article>
                                     <header>
-                                        <span class="date">EDA & Statistics</span>
-                                        <h2><a href="https://github.com/pranavsp108/IPL_Analysis_Apache_Spark.git" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'IPL_Data_Analysis'});">IPL Data <br />Analysis</a></h2>
+                                        <span class="date">Time Series Forecasting</span>
+                                        <h2><a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Time_Series_Forecasting'});">Time-Series Forecasting <br />with XGBoost</a></h2>
                                     </header>
-                                    <a href="https://github.com/pranavsp108/IPL_Analysis_Apache_Spark.git" class="image fit" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'IPL_Data_Analysis'});"><img src="images/ML_DS/Ipl.jpg" alt="IPL Analysis" /></a>
-                                    <p>Exploratory data analysis of cricket match statistics to determine winning factors and player performance metrics.</p>
+                                    <a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" class="image fit" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Time_Series_Forecasting'});"><img src="images/ML_DS/Time_series.jpg" alt="Time-Series Forecasting with XGBoost" /></a>
+                                    <p>Engineered a feature-driven forecasting pipeline to predict hourly energy consumption, transforming raw temporal data into signals that captured complex seasonality and demand patterns.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://github.com/pranavsp108/IPL_Analysis_Apache_Spark.git" class="button" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'IPL_Data_Analysis'});">View Project</a></li>
+                                        <li><a href="https://github.com/pranavsp108/Time-Series-Forcasting.git" class="button" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Time_Series_Forecasting'});">View Project</a></li>
+                                    </ul>
+                                </article>
+                            
+                                <article>
+                                    <header>
+                                        <span class="date">Retail Analytics</span>
+                                        <h2><a href="https://github.com/pranavsp108/Market_Basket_Analysis-Instacart.git" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Market_Basket'});">Market Basket <br />Analysis</a></h2>
+                                    </header>
+                                    <a href="https://github.com/pranavsp108/Market_Basket_Analysis-Instacart.git" class="image fit" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Market_Basket'});"><img src="images/ML_DS/Market_basket.jpg" alt="Market Basket Analysis" /></a>
+                                    <p>Analyzed 3M+ grocery orders to identify customer buying patterns, segment shoppers by behavior, and uncover product associations relevant to retail decision-making.</p>
+                                    <ul class="actions special">
+                                        <li><a href="https://github.com/pranavsp108/Market_Basket_Analysis-Instacart.git" class="button" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Market_Basket'});">View Project</a></li>
+                                    </ul>
+                                </article>
+                            
+                                <article>
+                                    <header>
+                                        <span class="date">Fraud Detection</span>
+                                        <h2><a href="https://github.com/pranavsp108/Financial-Fraud-Detection.git" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Financial_Fraud_XGBoost'});">Financial Fraud <br />Detection</a></h2>
+                                    </header>
+                                    <a href="https://github.com/pranavsp108/Financial-Fraud-Detection.git" class="image fit" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Financial_Fraud_XGBoost'});"><img src="images/ML_DS/fraud.webp" alt="Financial Fraud Detection" /></a>
+                                    <p>Built fraud detection models using XGBoost and LightGBM, focusing on class imbalance, feature engineering, and precision-oriented identification of high-risk transactions.</p>
+                                    <ul class="actions special">
+                                        <li><a href="https://github.com/pranavsp108/Financial-Fraud-Detection.git" class="button" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Financial_Fraud_XGBoost'});">View Project</a></li>
+                                    </ul>
+                                </article>
+                            
+                                <article>
+                                    <header>
+                                        <span class="date">Statistical Analysis</span>
+                                        <h2><a href="https://github.com/pranavsp108/Chicago_Traffic_Data_Analysis.git" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Chicago_Traffic'});">Chicago Traffic <br />Risk Analysis</a></h2>
+                                    </header>
+                                    <a href="https://github.com/pranavsp108/Chicago_Traffic_Data_Analysis.git" class="image fit" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Chicago_Traffic'});"><img src="images/ML_DS/chicago-traffic.jpg" alt="Chicago Traffic Risk Analysis" /></a>
+                                    <p>Used R to analyze severe-injury crash patterns in Chicago traffic data and identify factors associated with higher-risk roadway incidents across recent years.</p>
+                                    <ul class="actions special">
+                                        <li><a href="https://github.com/pranavsp108/Chicago_Traffic_Data_Analysis.git" class="button" target="_blank" onclick="gtag('event', 'DS_project', {'project_name': 'Chicago_Traffic'});">View Project</a></li>
                                     </ul>
                                 </article>
                             </section>
 
                         <div id="viz-section" class="box" style="margin-top: 4rem; background-color: #fafafa;">
-                                <h2 style="text-align:center; font-size: 2.2em; letter-spacing: 0.1em; margin-bottom: 0;">
-                                    Data Visualization & Dashboards
-                                </h2>
+                            <h2 style="text-align:center; font-size: 2.2em; letter-spacing: 0.1em; margin-bottom: 0;">
+                                Dashboards & Decision Support
+                            </h2>
                             </div>
-
+                            
                             <section class="posts">
                                 <article>
                                     <header>
-                                        <span class="date">Healthcare Analytics</span>
-                                        <h2><a href="https://public.tableau.com/views/EmergencyRoomVisitsAnalytics_17627339383640/EmergencyRoomDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Emergency_Room'});">Emergency Room <br />Visits</a></h2>
-                                    </header>
-                                    <a href="https://public.tableau.com/views/EmergencyRoomVisitsAnalytics_17627339383640/EmergencyRoomDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Emergency_Room'});"><img src="images/DV/er.jpg" alt="ER Visits" /></a>
-                                    <p>Operational dashboard analyzing patient throughput, visit reasons, and peak traffic times to assist in staffing optimization and resource allocation for emergency departments.</p>
-                                    <ul class="actions special">
-                                        <li><a href="https://public.tableau.com/views/EmergencyRoomVisitsAnalytics_17627339383640/EmergencyRoomDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Emergency_Room'});">View Dashboard</a></li>
-                                    </ul>
-                                </article>
-
-                                <article>
-                                    <header>
-                                        <span class="date">Clinical Data</span>
-                                        <h2><a href="https://public.tableau.com/views/Heartfailure_17627340496090/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Heart_Failure'});">Heart Failure <br />Analysis</a></h2>
-                                    </header>
-                                    <a href="https://public.tableau.com/views/Heartfailure_17627340496090/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Heart_Failure'});"><img src="images/DV/heart.jpeg" alt="Heart Failure" /></a>
-                                    <p>Clinical dashboard correlating patient demographics with key medical indicators to identify high-risk factors and patterns associated with heart failure outcomes.</p>
-                                    <ul class="actions special">
-                                        <li><a href="https://public.tableau.com/views/Heartfailure_17627340496090/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Heart_Failure'});">View Dashboard</a></li>
-                                    </ul>
-                                </article>
-
-                                <article>
-                                    <header>
-                                        <span class="date">Sales Strategy</span>
+                                        <span class="date">Sales & Pricing Analytics</span>
                                         <h2><a href="https://public.tableau.com/views/LaptopSalesPerformanceDashboard/FinalDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Laptop_Sales'});">Laptop Sales <br />Performance</a></h2>
                                     </header>
-                                    <a href="https://public.tableau.com/views/LaptopSalesPerformanceDashboard/FinalDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Laptop_Sales'});"><img src="images/DV/laptop.jpg" alt="Laptop Sales" /></a>
-                                    <p>An interactive dashboard analyzing sales trends, geographic distribution, and product configurations to identify key revenue drivers and optimal pricing strategies for the UK market.</p>
+                                    <a href="https://public.tableau.com/views/LaptopSalesPerformanceDashboard/FinalDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Laptop_Sales'});"><img src="images/DV/laptop.jpg" alt="Laptop Sales Performance Dashboard" /></a>
+                                    <p>Built an interactive dashboard to evaluate regional sales performance, product mix, and pricing patterns in the UK laptop market, helping highlight revenue drivers, underperforming segments, and opportunities for commercial improvement.</p>
                                     <ul class="actions special">
                                         <li><a href="https://public.tableau.com/views/LaptopSalesPerformanceDashboard/FinalDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Laptop_Sales'});">View Dashboard</a></li>
                                     </ul>
                                 </article>
-
+                            
                                 <article>
                                     <header>
-                                        <span class="date">Media Analytics</span>
-                                        <h2><a href="https://public.tableau.com/views/IMDbMovieDashboard_17627341409670/IMDbMovieDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'IMDb_Movie'});">IMDb Movie <br />Dashboard</a></h2>
+                                        <span class="date">Operations Analytics</span>
+                                        <h2><a href="https://public.tableau.com/views/EmergencyRoomVisitsAnalytics_17627339383640/EmergencyRoomDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Emergency_Room'});">Emergency Room <br />Visits</a></h2>
                                     </header>
-                                    <a href="https://public.tableau.com/views/IMDbMovieDashboard_17627341409670/IMDbMovieDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'IMDb_Movie'});"><img src="images/DV/imdb.png" alt="IMDb" /></a>
-                                    <p>A comprehensive visualization of historical movie data, analyzing genre popularity, rating distributions, and audience preference shifts over decades of cinema history.</p>
+                                    <a href="https://public.tableau.com/views/EmergencyRoomVisitsAnalytics_17627339383640/EmergencyRoomDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Emergency_Room'});"><img src="images/DV/er.jpg" alt="Emergency Room Visits Dashboard" /></a>
+                                    <p>Designed an operational dashboard to monitor patient flow, peak visit periods, and visit reasons, supporting staffing decisions, throughput visibility, and more efficient resource planning in emergency care settings.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://public.tableau.com/views/IMDbMovieDashboard_17627341409670/IMDbMovieDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'IMDb_Movie'});">View Dashboard</a></li>
+                                        <li><a href="https://public.tableau.com/views/EmergencyRoomVisitsAnalytics_17627339383640/EmergencyRoomDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Emergency_Room'});">View Dashboard</a></li>
                                     </ul>
                                 </article>
-
+                            
                                 <article>
                                     <header>
-                                        <span class="date">Social Media</span>
-                                        <h2><a href="https://public.tableau.com/shared/9TQ4PM64P?:display_count=n&:origin=viz_share_link" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Instagram_Analytics'});">Instagram <br />Analytics</a></h2>
+                                        <span class="date">Clinical Analytics</span>
+                                        <h2><a href="https://public.tableau.com/views/Heartfailure_17627340496090/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Heart_Failure'});">Heart Failure <br />Analysis</a></h2>
                                     </header>
-                                    <a href="https://public.tableau.com/shared/9TQ4PM64P?:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Instagram_Analytics'});"><img src="images/DV/insta.png" alt="Instagram" /></a>
-                                    <p>An interactive analysis of user behavior and content performance, tracking engagement metrics and demographic trends to optimize social media strategies and audience reach.</p>
+                                    <a href="https://public.tableau.com/views/Heartfailure_17627340496090/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Heart_Failure'});"><img src="images/DV/heart.jpeg" alt="Heart Failure Analysis Dashboard" /></a>
+                                    <p>Created a clinical dashboard to examine patient risk indicators, demographic patterns, and outcome trends, helping surface factors that could support earlier identification and prioritization of higher-risk cases.</p>
                                     <ul class="actions special">
-                                        <li><a href="https://public.tableau.com/shared/9TQ4PM64P?:display_count=n&:origin=viz_share_link" class="button" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Instagram_Analytics'});">View Dashboard</a></li>
+                                        <li><a href="https://public.tableau.com/views/Heartfailure_17627340496090/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Heart_Failure'});">View Dashboard</a></li>
                                     </ul>
                                 </article>
-
+                            
                                 <article>
                                     <header>
-                                        <span class="date">Content Strategy</span>
+                                        <span class="date">Content Analytics</span>
                                         <h2><a href="https://public.tableau.com/views/Netflix_17627342414270/Netflix?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Netflix_Content_Analysis'});">Netflix Content <br />Analysis</a></h2>
                                     </header>
-                                    <a href="https://public.tableau.com/views/Netflix_17627342414270/Netflix?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Netflix_Content_Analysis'});"><img src="images/DV/netflix.jpg" alt="Netflix" /></a>
-                                    <p>A deep dive into the Netflix content library, visualizing genre distribution, release patterns, and viewer ratings to understand streaming trends and content popularity.</p>
+                                    <a href="https://public.tableau.com/views/Netflix_17627342414270/Netflix?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="image fit" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Netflix_Content_Analysis'});"><img src="images/DV/netflix.jpg" alt="Netflix Content Analysis Dashboard" /></a>
+                                    <p>Developed a content analytics dashboard to explore genre mix, release trends, and title distribution across the Netflix library, helping identify content patterns and shifts in catalog composition over time.</p>
                                     <ul class="actions special">
                                         <li><a href="https://public.tableau.com/views/Netflix_17627342414270/Netflix?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button" target="_blank" onclick="gtag('event', 'viz_project', {'project_name': 'Netflix_Content_Analysis'});">View Dashboard</a></li>
                                     </ul>
@@ -453,8 +504,9 @@
                                 <h3>Social</h3>
                                 <ul class="icons alt">
                                     <li><a href="https://www.linkedin.com/in/pranavsp108/" class="icon brands fa-linkedin" target="_blank" onclick="gtag('event', 'social_click', {'network': 'LinkedIn'});"><span class="label">LinkedIn</span></a></li>
-                                    <li><a href="https://www.kaggle.com/pranavpadmannavar" class="icon brands alt fa-kaggle" target="_blank" onclick="gtag('event', 'social_click', {'network': 'Kaggle'});"><span class="label">Kaggle</span></a></li>
                                     <li><a href="https://github.com/pranavsp108" class="icon brands alt fa-github" target="_blank" onclick="gtag('event', 'social_click', {'network': 'GitHub'});"><span class="label">GitHub</span></a></li>
+                                    <li><a href="https://www.kaggle.com/pranavpadmannavar" class="icon brands alt fa-kaggle" target="_blank" onclick="gtag('event', 'social_click', {'network': 'Kaggle'});"><span class="label">Kaggle</span></a></li>
+                                    <li><a href="https://public.tableau.com/app/profile/pranav.padmannavar/vizzes" class="tableau-badge" target="_blank" onclick="gtag('event', 'social_click', {'network': 'Tableau'});">Tb</a></li>
                                 </ul>
                             </section>
                         </section>
@@ -473,6 +525,48 @@
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
-
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const navLinks = document.querySelectorAll('#main-nav-links li a[href^="#"]');
+                    const navItems = document.querySelectorAll('#main-nav-links li');
+                
+                    const sections = ['intro', 'profile', 'projects', 'footer']
+                        .map(id => document.getElementById(id))
+                        .filter(Boolean);
+                
+                    function setActiveLink(id) {
+                        navItems.forEach(li => li.classList.remove('active'));
+                        navLinks.forEach(link => {
+                            const href = link.getAttribute('href');
+                            if (href === `#${id}`) {
+                                link.parentElement.classList.add('active');
+                            }
+                        });
+                    }
+                
+                    function onScroll() {
+                        let currentSection = 'intro';
+                
+                        sections.forEach(section => {
+                            const rect = section.getBoundingClientRect();
+                            if (rect.top <= 150) {
+                                currentSection = section.id;
+                            }
+                        });
+                
+                        setActiveLink(currentSection);
+                    }
+                
+                    navLinks.forEach(link => {
+                        link.addEventListener('click', function () {
+                            const targetId = this.getAttribute('href').replace('#', '');
+                            setActiveLink(targetId);
+                        });
+                    });
+                
+                    window.addEventListener('scroll', onScroll);
+                    onScroll();
+                });
+                </script>
     </body>
 </html>
